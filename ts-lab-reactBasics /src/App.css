@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.info {
+    border: solid gray;
+    padding: 2em;
+    border-radius: 1em;
+}
+

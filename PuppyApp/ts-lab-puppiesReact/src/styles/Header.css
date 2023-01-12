@@ -1,0 +1,8 @@
+.Header {
+  display: grid;
+  justify-items: center;
+}
+
+.form {
+  display: grid;
+}

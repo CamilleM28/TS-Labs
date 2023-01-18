@@ -1,5 +1,3 @@
-# PGP test
-
 ## Tiny blog
 
 ### Purpose

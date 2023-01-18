@@ -1,5 +1,3 @@
-# &lt;/salt&gt;
-
 ## Puppies API with Typescript
 
 In this exercise you will create a puppy API with Express and Typescript. The goal is to get familiar with Typescript and how to use it in Node.js. Again, if you are in the DNFS or JFS stack, switch this API to your respective language and skip TypeScript. (then, just delete the rest of the files and just keep this README!)

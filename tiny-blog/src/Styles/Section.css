@@ -14,13 +14,13 @@
 }
 
 .category-heading {
-    margin: 0.4em 0;
+    margin: 0.3em ;
 }
 
-button {
+.arrow {
     border: none;
     border-radius: 0.2em;
     background-color: transparent;
     color: whitesmoke;
-    margin-top: 1em;
+    margin-top: 1.7em;
 }

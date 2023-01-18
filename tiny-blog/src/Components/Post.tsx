@@ -9,7 +9,7 @@ const Post = ({post}: IPostData) => {
     return <div className="card">
         <h2>{post.title}</h2>
         <p>{post.body}</p>
-        <p>Tags:{" "}{post.tags.map(tag => <span><b>{tag}{" "}</b></span>)}</p>
+        <p>Tags:{" "}{post.tags.map(tag => <span key={post.tags.indexOf(tag)}><b>{tag}{" "}</b></span>)}</p>
     </div>
 }
 

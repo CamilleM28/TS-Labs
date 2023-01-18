@@ -1,0 +1,26 @@
+.dropdown {
+    transition: height 1.5s;
+    overflow: scroll;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2em;
+    border-radius: 0.2em;
+    background-color: #7c95ad;
+    color: whitesmoke;
+}
+
+.category-heading {
+    margin: 0.4em 0;
+}
+
+button {
+    border: none;
+    border-radius: 0.2em;
+    background-color: transparent;
+    color: whitesmoke;
+    margin-top: 1em;
+}

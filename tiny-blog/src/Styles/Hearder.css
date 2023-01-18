@@ -1,0 +1,23 @@
+.header {
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    margin: 0 0 1em;
+    padding: 0 0 1em;
+}
+
+.title {
+    color: #7c95ad;
+    font-size: 3.2rem;
+}
+
+.navbar > * {
+   margin: 0.2em;
+    text-decoration: none;
+    border: solid thin;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    color: #7c95ad;
+    background-color: white;
+}

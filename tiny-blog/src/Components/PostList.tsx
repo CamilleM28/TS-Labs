@@ -10,7 +10,7 @@ const PostList = ({posts} : IAllPosts) => {
     return <>
         <h1 className="subheading">All Posts</h1>
         {
-            posts && posts.map((post) => <Post key={post.id} post={post}/>) 
+           posts.map((post) => <Post key={post.id} post={post}/>) 
         }
     </>
 }

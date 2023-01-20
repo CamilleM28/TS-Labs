@@ -4,18 +4,17 @@ import Post from "./Post";
 import "../Styles/Section.css";
 
 interface ISection {
-  index: number;
   list: IPost[];
-  tags: string[];
+  label: string;
 }
 
-const PostSection = ({ list, tags, index }: ISection) => {
+const PostSection = ({ list, label }: ISection) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <div className="section-header" onClick={() => setOpen(!open)}>
-        <h1 className="category-heading">{tags[index]}</h1>
+        <h1 className="category-heading">{label}</h1>
         <p className="arrow">{open ? "\u1431" : "\u142F"}</p>
       </div>
       <div className="dropdown" style={{ height: open ? "50em" : "0" }}>

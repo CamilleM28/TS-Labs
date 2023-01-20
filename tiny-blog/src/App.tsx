@@ -10,10 +10,10 @@ const App = () => {
     { body: "", id: 0, reactions: 0, tags: [], title: "", userID: 0 },
   ]);
   const tags = ["love", "crime", "mystery", "history", "fiction"];
-  const [filteredPosts, setFilteredPosts] = useState<IPost[][]>([
-    [{ body: "", id: 0, reactions: 0, tags: [], title: "", userID: 0 }],
-    [{ body: "", id: 0, reactions: 0, tags: [], title: "", userID: 0 }],
-  ]);
+  const [filteredPosts, setFilteredPosts] = useState<{ label: string; value: IPost[]}[]>([
+      {label: "", value:  [{body: "", id: 0, reactions: 0, tags: [], title: "", userID: 0 }]},
+      {label: "", value:  [{body: "", id: 0, reactions: 0, tags: [], title: "", userID: 0 }]}
+      ]);
 
   useEffect(() => {
     const getPosts = async () => {
@@ -29,9 +29,9 @@ const App = () => {
   useEffect(() => {
     const postFilter = (): void => {
       const filtered = tags.map((tag) =>
-        posts.filter((posts) => posts.tags.includes(tag))
+        { return {label: tag, value: posts.filter((posts) => posts.tags.includes(tag))}}
       );
-      console.log(filtered, filtered.values);
+      console.log(filtered);
       setFilteredPosts(filtered);
     };
     postFilter();
@@ -45,7 +45,7 @@ const App = () => {
           element={
             <>
               <Header />
-              <FilteredPostList posts={filteredPosts} tags={tags} />
+              <FilteredPostList posts={filteredPosts} />
             </>
           }
         />

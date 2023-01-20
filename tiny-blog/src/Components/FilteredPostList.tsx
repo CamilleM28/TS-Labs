@@ -1,23 +1,20 @@
 import IPost from "../Types/IPost";
-import Post from "./Post";
 import PostSection from "./PostSection";
 import "../Styles/List.css";
-import { useState } from "react";
 
 interface IFilteredPosts {
-  tags: string[];
-  posts: IPost[][];
+  posts: { label: string; value: IPost[]}[];
 }
 
-const FilteredPostList = ({ posts, tags }: IFilteredPosts) => {
+const FilteredPostList = ({ posts }: IFilteredPosts) => {
   return (
     <>
       <h1 className="subheading">Home</h1>
       {posts.map((section) => (
         <PostSection
-          list={section}
-          tags={tags}
-          index={posts.indexOf(section)}
+            key={posts.indexOf(section)}
+          list={section.value}
+            label={section.label}
         />
       ))}
     </>
